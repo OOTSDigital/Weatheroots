@@ -1,0 +1,116 @@
+{% extends "_layouts/cp" %}
+{% set centered = true %}
+
+{% set ads = craft.weatheroots.getAll %}
+
+{% set title = "List of All Towns"|t %}
+{% set content %}
+
+    <p id="noAds"{% if ads|length %} class="hidden"{% endif %}>
+        {{ "No Towns in the Database yet."|t }}
+    </p>
+
+    {% if ads|length %}
+
+        <table id="gallery" class="data">
+            <thead>
+                <th scope="col">{{ "ID"|t }}</th>
+                <th scope="col">{{ "Town"|t }}</th>
+                <th scope="col">{{ "State"|t }}</th>
+                <th scope="col">{{ "Status"|t }}</th>
+                <th scope="col">{{ "Date Created"|t }}</th>
+            </thead>
+            <tbody>
+		
+                {% for ad in ads %}
+
+                    <tr data-id="{{ ad.id }}" data-name="{{ ad.town|t }}">
+			                <td> {{ ad.id }} </td>
+                      <td> {{ ad.town }}</td>
+                      <td> {{ ad.state }}</td>
+                      <td> {{ ad.status }}</td>
+                      <td> {{ ad.dateCreated | date("d-m-Y", "Australia/Sydney") }} </td>
+                      </form>
+
+                            {%set update_url = "weatheroots/edit/"~ad.id %}  <!--Concatenate here action & id -->
+                            {%set delete_url = "weatheroots/delete/"~ad.id %} 
+
+                        <td>
+                            <a  href="{{url(update_url) }}" type="submit" class="btn icon update_ad" data-id="{{ad.id}}">{{ "Edit"|t }}</a>
+                        </td>
+                        
+                        <td>
+                            <a  href="{{url(delete_url) }}" class="btn icon delete_ad" data-id="{{ad.id}}"> {{ "Delete"|t }} </a>
+                        </td>
+                  
+                    </tr>
+
+                {% endfor %}
+         
+            </tbody>
+        </table>
+
+    {% endif %}
+
+    <div class="buttons">
+        <a href="{{ url('weatheroots/new') }}" class="btn add icon">{{"Add New Town"|t }}</a>
+    </div>
+
+{% endset %}  
+
+{% set js %}
+
+$(".update_ad").click(function() {
+  
+var id = $(this).attr("data-id");
+var town = "Town Updated";
+
+var jsObj = {"id":id, "town":town};
+
+ $.ajax({ 
+  type: 'POST', 
+  url: "edit", 
+  data: {'jsObj':jsObj},
+  
+  success: function(data1){
+      console.log("Ad sucessfully Updated!");
+   },
+
+  error: function(data1){
+      console.log("Sorry Error,Ad not Updated!");
+  }
+
+  }); 
+}); 
+
+{% endset %}
+
+{% set js_delete %}
+
+$(".delete_ad").click(function() {
+  
+var id = $(this).attr("data-id");
+
+var jsObj = {"id":id};
+
+ $.ajax({ 
+  type: 'POST', 
+  url: "delete", 
+  data: {'jsObj':jsObj},
+  
+  success: function(data1){
+      console.log("Town sucessfully deleted!");
+   },
+
+  error: function(data1){
+      console.log("Sorry Error,Gallery not deleted!");
+  }
+
+  }); 
+}); 
+
+{% endset %}
+
+{% includeJs js %}
+{% includeJs js_delete %}
+

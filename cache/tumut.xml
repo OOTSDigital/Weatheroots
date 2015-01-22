@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Weather.com.au RSS Feed must be used in accordance with the terms and conditions listed at http://www.weather.com.au/about/rss -->
+<rss version="2.0" xmlns:w="http://rss.weather.com.au/w.dtd">
+	<channel>
+		<title>Weather.com.au - Tumut Weather</title>
+		<link>http://www.weather.com.au/nsw/tumut</link>
+		<description>Current conditions and forecast for Tumut, New South Wales.</description>
+		<language>en-au</language>
+		<copyright>Copyright 2015 - Weather.com.au Pty Ltd</copyright>
+		<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+		<lastBuildDate>Thu, 22 Jan 2015 03:15:00 GMT</lastBuildDate>
+		<ttl>15</ttl>
+		<item>
+			<title>Tumut Current Conditions</title>
+			<link>http://www.weather.com.au/nsw/tumut/current</link>
+			<description>
+				<![CDATA[
+					<b>Temperature:</b> 29.6&deg;C<br />
+					<b>Dew Point:</b> 16.4&deg;C<br />
+					<b>Relative Humidity:</b> 45%<br />
+					<b>Wind Speed:</b> 11.1km/h<br />
+					<b>Wind Gusts:</b> 16.7km/h<br />
+					<b>Wind Direction:</b> ENE<br />
+					<b>Pressure:</b> 1010.5hPa<br />
+					<b>Rain Since 9AM:</b> 0.0mm<br />
+				]]>
+			</description>
+			<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+			<guid isPermaLink="false">C1421896500</guid>
+			<w:current temperature="29.6" dewPoint="16.4" humidity="45" windSpeed="11.1" windGusts="16.7" windDirection="ENE" pressure="1010.5" rain="0.0" />
+		</item>
+		<item>
+			<title>Tumut Forecast</title>
+			<link>http://www.weather.com.au/nsw/tumut</link>
+			<description>
+				<![CDATA[
+					<p>
+						<b>Thursday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/4.gif" alt="Morning Clouds" /><br />
+						Morning Clouds. Warm.<br />
+						17 - 33<br />
+					</p>
+					<p>
+						<b>Friday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/4.gif" alt="Afternoon Clouds" /><br />
+						Afternoon Clouds. Warm.<br />
+						19 - 33<br />
+					</p>
+					<p>
+						<b>Saturday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/22.gif" alt="Thunderstorms" /><br />
+						Thunderstorms. Mostly Cloudy. Warm.<br />
+						20 - 32<br />
+					</p>
+				]]>
+			</description>
+			<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+			<guid isPermaLink="false">F1421896500</guid>
+			<w:forecast day="Thursday" description="Morning Clouds. Warm." min="17" max="33" icon="4" iconUri="http://www.weather.com.au/images/icons/4.gif" iconAlt="Morning Clouds" />
+			<w:forecast day="Friday" description="Afternoon Clouds. Warm." min="19" max="33" icon="4" iconUri="http://www.weather.com.au/images/icons/4.gif" iconAlt="Afternoon Clouds" />
+			<w:forecast day="Saturday" description="Thunderstorms. Mostly Cloudy. Warm." min="20" max="32" icon="22" iconUri="http://www.weather.com.au/images/icons/22.gif" iconAlt="Thunderstorms" />
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,79 @@
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+{% set centered = true %}
+
+{% set content %}
+
+{% set id_passed = craft.request.getSegment(3) %} <!-- Segment 3 of Url here means the id-->
+
+{% set ad = craft.weatheroots.getTownById(id_passed) %}
+
+ {% if ad|length %}
+
+    <h2>Edit Town</h2>
+
+    <form method="post" action="" accept-charset="UTF-8" enctype="multipart/form-data">
+
+        <!-- end select image to show -->
+        <input type="hidden" name="action" value="weatheroots/update" />
+        <input type="hidden" name="redirect" value="weatheroots/index" />
+        <input type="hidden" name="id" value="{{id_passed}}" /> <!-- pass id as hidden field here-->
+
+            <div class="form-group one half half-padded">
+                <label for="town" class="col-sm-2 control-label">Town <span class="req">*</span></label>
+              
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="name" name="town" placeholder="Town" value="{{ad.town}}">
+                </div>
+            </div>
+
+        
+            <div class="form-group one half half-padded">
+                  <label for="state" class="col-sm-2 control-label">State <span class="req">*</span></label>
+                
+                  <div class="col-sm-10">
+                    
+                       <select id="state" name="state" >
+                            <option value="NSW">New South Wales</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="ACT">ACT</option>
+                            <option value="SA">South Australia</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="WA">Western Australia</option>
+                            <option value="TAS">Tasmania</option>
+                       </select>
+
+                  </div>
+            </div>
+
+             <div class="form-group one half half-padded">
+                  <label for="status" class="col-sm-2 control-label">Status <span class="req">*</span></label>
+                
+                  <div class="col-sm-10">
+                    
+                    <select id="status" name="status" >
+                        {%if ad.status == "active" %}
+                          <option value="active" selected >Active</option>
+                          <option value= "inActive">Inactive</option>
+                        {%else%} 
+                          <option value="active">Active</option> 
+                          <option value= "inActive" selected >Inactive</option>
+                        {%endif%}
+                    </select>
+                  </div>
+            </div>
+
+        <div class="buttons">
+            <input type="submit" class="btn submit" value="{{ 'Save'|t }}">
+        </div>
+
+    </form>
+{%else%}
+    <p> Sorry No Town Selected</p>
+    <div class="buttons">
+        <a href="{{ url('weatheroots/index') }}" class="btn add icon">{{"View All Towns"|t }}</a>
+    </div>
+
+{%endif%}
+
+{% endset %}

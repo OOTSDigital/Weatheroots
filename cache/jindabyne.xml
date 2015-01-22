@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Weather.com.au RSS Feed must be used in accordance with the terms and conditions listed at http://www.weather.com.au/about/rss -->
+<rss version="2.0" xmlns:w="http://rss.weather.com.au/w.dtd">
+	<channel>
+		<title>Weather.com.au - Jindabyne Weather</title>
+		<link>http://www.weather.com.au/nsw/jindabyne</link>
+		<description>Current conditions and forecast for Jindabyne, New South Wales.</description>
+		<language>en-au</language>
+		<copyright>Copyright 2015 - Weather.com.au Pty Ltd</copyright>
+		<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+		<lastBuildDate>Thu, 22 Jan 2015 03:15:00 GMT</lastBuildDate>
+		<ttl>15</ttl>
+		<item>
+			<title>Jindabyne Current Conditions</title>
+			<link>http://www.weather.com.au/nsw/jindabyne/current</link>
+			<description>
+				<![CDATA[
+					<b>Temperature:</b> 17.9&deg;C<br />
+					<b>Dew Point:</b> 11.2&deg;C<br />
+					<b>Relative Humidity:</b> 65%<br />
+					<b>Wind Speed:</b> 5.6km/h<br />
+					<b>Wind Gusts:</b> 11.1km/h<br />
+					<b>Wind Direction:</b> ENE<br />
+					<b>Pressure:</b> 0.0hPa<br />
+					<b>Rain Since 9AM:</b> 0.0mm<br />
+				]]>
+			</description>
+			<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+			<guid isPermaLink="false">C1421896500</guid>
+			<w:current temperature="17.9" dewPoint="11.2" humidity="65" windSpeed="5.6" windGusts="11.1" windDirection="ENE" pressure="0.0" rain="0.0" />
+		</item>
+		<item>
+			<title>Jindabyne Forecast</title>
+			<link>http://www.weather.com.au/nsw/jindabyne</link>
+			<description>
+				<![CDATA[
+					<p>
+						<b>Thursday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/6.gif" alt="Broken Clouds" /><br />
+						Broken Clouds. Warm.<br />
+						12 - 29<br />
+					</p>
+					<p>
+						<b>Friday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/33.gif" alt="Passing Showers" /><br />
+						Passing Showers. Mostly Cloudy. Warm.<br />
+						14 - 29<br />
+					</p>
+					<p>
+						<b>Saturday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/19.gif" alt="Numerous Showers" /><br />
+						Numerous Showers. Mostly Cloudy. Mild.<br />
+						14 - 27<br />
+					</p>
+				]]>
+			</description>
+			<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+			<guid isPermaLink="false">F1421896500</guid>
+			<w:forecast day="Thursday" description="Broken Clouds. Warm." min="12" max="29" icon="6" iconUri="http://www.weather.com.au/images/icons/6.gif" iconAlt="Broken Clouds" />
+			<w:forecast day="Friday" description="Passing Showers. Mostly Cloudy. Warm." min="14" max="29" icon="33" iconUri="http://www.weather.com.au/images/icons/33.gif" iconAlt="Passing Showers" />
+			<w:forecast day="Saturday" description="Numerous Showers. Mostly Cloudy. Mild." min="14" max="27" icon="19" iconUri="http://www.weather.com.au/images/icons/19.gif" iconAlt="Numerous Showers" />
+		</item>
+	</channel>
+</rss>

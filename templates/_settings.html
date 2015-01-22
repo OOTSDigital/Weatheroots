@@ -1,0 +1,30 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	label:         "Cache File"|t,
+	id:            'cacheFile',
+	name:          'cacheFile',
+	instructions: "This is the location where Cache Files will be saved (*required)."|t,
+	value:         (settings.cacheFile ? settings.cacheFile : " "|t),
+	errors:        settings.getErrors('cacheFile')
+}) }}
+
+
+{{ forms.textField({
+	label:         "RSS Feed Url"|t,
+	id:            'rssFeedUrl',
+	name:          'rssFeedUrl',
+	instructions: "RSS Feed Url eg.http://rss.weather.com.au/nsw/ (*required)."|t,
+	value:         (settings.rssFeedUrl ? settings.rssFeedUrl : "http://rss.weather.com.au/nsw/"|t),
+	errors:        settings.getErrors('rssFeedUrl')
+}) }}
+
+
+{{ forms.textField({
+	label:         "Link Back Url"|t,
+	id:            'linkBackUrl',
+	name:          'linkBackUrl',
+	instructions: "Link back Url eg.http://weather.com.au/nsw/ (*required)."|t,
+	value:         (settings.linkBackUrl ? settings.linkBackUrl : "http://weather.com.au/nsw/"|t),
+	errors:        settings.getErrors('linkBackUrl')
+}) }}

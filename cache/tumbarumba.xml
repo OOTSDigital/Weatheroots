@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Weather.com.au RSS Feed must be used in accordance with the terms and conditions listed at http://www.weather.com.au/about/rss -->
+<rss version="2.0" xmlns:w="http://rss.weather.com.au/w.dtd">
+	<channel>
+		<title>Weather.com.au - Tumbarumba Weather</title>
+		<link>http://www.weather.com.au/nsw/tumbarumba</link>
+		<description>Current conditions and forecast for Tumbarumba, New South Wales.</description>
+		<language>en-au</language>
+		<copyright>Copyright 2015 - Weather.com.au Pty Ltd</copyright>
+		<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+		<lastBuildDate>Thu, 22 Jan 2015 03:15:00 GMT</lastBuildDate>
+		<ttl>15</ttl>
+		<item>
+			<title>Tumbarumba Forecast</title>
+			<link>http://www.weather.com.au/nsw/tumbarumba</link>
+			<description>
+				<![CDATA[
+					<p>
+						<b>Thursday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/4.gif" alt="Morning Clouds" /><br />
+						Morning Clouds. Warm.<br />
+						14 - 30<br />
+					</p>
+					<p>
+						<b>Friday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/2.gif" alt="Mostly Sunny" /><br />
+						Mostly Sunny. Warm.<br />
+						17 - 32<br />
+					</p>
+					<p>
+						<b>Saturday:</b><br />
+						<img src="http://www.weather.com.au/images/icons/23.gif" alt="Strong Thunderstorms" /><br />
+						Strong Thunderstorms. Mostly Cloudy. Warm.<br />
+						18 - 31<br />
+					</p>
+				]]>
+			</description>
+			<pubDate>Thu, 22 Jan 2015 03:15:00 GMT</pubDate>
+			<guid isPermaLink="false">F1421896500</guid>
+			<w:forecast day="Thursday" description="Morning Clouds. Warm." min="14" max="30" icon="4" iconUri="http://www.weather.com.au/images/icons/4.gif" iconAlt="Morning Clouds" />
+			<w:forecast day="Friday" description="Mostly Sunny. Warm." min="17" max="32" icon="2" iconUri="http://www.weather.com.au/images/icons/2.gif" iconAlt="Mostly Sunny" />
+			<w:forecast day="Saturday" description="Strong Thunderstorms. Mostly Cloudy. Warm." min="18" max="31" icon="23" iconUri="http://www.weather.com.au/images/icons/23.gif" iconAlt="Strong Thunderstorms" />
+		</item>
+	</channel>
+</rss>
